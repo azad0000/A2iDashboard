@@ -33,7 +33,7 @@ class HomeController extends Controller
     }
     public function dashboard(){
         if(Auth::check()){
-            $all_data = User_collection_Data::all();    
+            $all_data = User_collection_Data::with('division_name','district_name','sub_district_name')->get();   
             return view('dashboard.dashboard',compact('all_data'));
           }
            return Redirect::to("home")->withSuccess('Opps! You do not have access');

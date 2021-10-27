@@ -44,9 +44,9 @@
                         <tr>
                           <th scope="row">{{ $key+1 }}</th>
                           <td>{{ $item->date }}</td>
-                          <td>{{ $item->divisions()->bbs_code }}</td>
-                          <td>{{ $item->districts()->bbs_code}}</td>
-                          <td>{{ $item->sub_districts()->bbs_code}}</td>
+                          <td style="text-transform:capitalize">{{ $item->division_name->name }}</td>
+                          <td style="text-transform: capitalize">{{ $item->district_name->name}}</td>
+                          <td style="text-transform: capitalize">{{ $item->sub_district_name->name}}</td>
                           <td>{{ $item->village_order }}</td>
                           <td>{{ $item->city_order }}</td>
                           <td>{{ $item->supply_order }}</td>
