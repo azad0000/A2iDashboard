@@ -26,7 +26,6 @@
 <script>
     var btn = document.getElementById('logout_btn');
     var form = document.getElementById('logout_form');
-    console.log(event);
     btn.addEventListener('click',function(event){
         event.preventDefault();
         form.submit();

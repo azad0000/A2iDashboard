@@ -67,28 +67,36 @@ class DataController extends Controller
     public function edit_collection_data(){
         $data_id = request('data_id');
         $edit_data = User_collection_Data::where('id',$data_id)->first();
-        return $edit_data;
+        $district_id = $edit_data->district;
+        $sub_district_id = $edit_data->sub_district;
+        $district = district::where('bbs_code',$district_id)->first();
+        $sub_district = sub_district::where('bbs_code',$sub_district_id)->first();
+        $dis_name = $district->name;
+        $sub_name=$sub_district->name;
+        $all_data=[$edit_data,$dis_name,$sub_name];
+        return $all_data;
     }
     public function store_data(Request $request){
+        $collection_data =$request->division;
         $data_id = request('data_id');
         $collection_data = User_collection_Data::where('id',$data_id)->first();
         $collection_data->date=$request->date;
         $collection_data->division =$request->division;
-        $collection_data->division =$request->district;
-        $collection_data->division =$request->sub_district;
-        $collection_data->division =$request->village_order;
-        $collection_data->division =$request->city_order;
-        $collection_data->division =$request->supply_order;
-        $collection_data->division =$request->village_supply_order;
-        $collection_data->division =$request->city_supply_order;
-        $collection_data->division =$request->product_type;
-        $collection_data->division =$request->total_transaction;
-        $collection_data->division =$request->inter_commission;
-        $collection_data->division =$request->source_amount;
-        $collection_data->division =$request->digital_center;
-        $collection_data->division =$request->join_digital_center;
-        $collection_data->division =$request->trans_digital_center;
-        $collection_data->division =$request->others_center;
+        $collection_data->district =$request->district;
+        $collection_data->sub_district =$request->sub_district;
+        $collection_data->village_order =$request->village_order;
+        $collection_data->city_order =$request->city_order;
+        $collection_data->supply_order =$request->supply_order;
+        $collection_data->village_supply_order =$request->village_supply_order;
+        $collection_data->city_supply_order =$request->city_supply_order;
+        $collection_data->product_type =$request->product_type;
+        $collection_data->total_transaction =$request->total_transaction;
+        $collection_data->inter_commission =$request->inter_commission;
+        $collection_data->source_amount =$request->source_amount;
+        $collection_data->digital_center =$request->digital_center;
+        $collection_data->join_digital_center =$request->join_digital_center;
+        $collection_data->trans_digital_center =$request->trans_digital_center;
+        $collection_data->others_center =$request->others_center;
         $collection_data->save();
         return Response::json($collection_data);
     }
