@@ -7,6 +7,7 @@ use App\Models\division;
 use App\Models\sub_district;
 use App\Models\User_collection_Data;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 class DataController extends Controller
 {
@@ -56,5 +57,39 @@ class DataController extends Controller
 
         $all_data->save();
         return redirect()->back()->with('success','Data Add Successfully');
+    }
+
+    public function emulate_data(){
+        
+        $emulate_data = User_collection_Data::all();
+        return view('dashboard.emulate',compact('emulate_data','divisions'));
+    }
+    public function edit_collection_data(){
+        $data_id = request('data_id');
+        $edit_data = User_collection_Data::where('id',$data_id)->first();
+        return $edit_data;
+    }
+    public function store_data(Request $request){
+        $data_id = request('data_id');
+        $collection_data = User_collection_Data::where('id',$data_id)->first();
+        $collection_data->date=$request->date;
+        $collection_data->division =$request->division;
+        $collection_data->division =$request->district;
+        $collection_data->division =$request->sub_district;
+        $collection_data->division =$request->village_order;
+        $collection_data->division =$request->city_order;
+        $collection_data->division =$request->supply_order;
+        $collection_data->division =$request->village_supply_order;
+        $collection_data->division =$request->city_supply_order;
+        $collection_data->division =$request->product_type;
+        $collection_data->division =$request->total_transaction;
+        $collection_data->division =$request->inter_commission;
+        $collection_data->division =$request->source_amount;
+        $collection_data->division =$request->digital_center;
+        $collection_data->division =$request->join_digital_center;
+        $collection_data->division =$request->trans_digital_center;
+        $collection_data->division =$request->others_center;
+        $collection_data->save();
+        return Response::json($collection_data);
     }
 }

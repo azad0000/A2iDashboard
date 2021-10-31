@@ -14,7 +14,7 @@
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="{{ route('add.data') }}">Add Data</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">All Data</a>
+                        <a class="nav-link" href="{{ route('emulate.data') }}">Emulated Data</a>
                     </nav>
                 </div>
                 

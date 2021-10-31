@@ -48,24 +48,24 @@
                   <div class="row mb-4">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="village_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="গ্রাম থেকে প্রাপ্ত অর্ডার">
+                        <input type="number" name="village_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="গ্রাম থেকে প্রাপ্ত অর্ডার" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="city_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="শহর থেকে প্রাপ্ত অর্ডার">
+                        <input type="number" name="city_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="শহর থেকে প্রাপ্ত অর্ডার" required>
                       </div>
                     </div>
                   </div>
                   <div class="row mb-4">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="supply_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="সরবরাহকৃত অর্ডার">
+                        <input type="number" name="supply_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="সরবরাহকৃত অর্ডার" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="village_supply_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="গ্রামাঞ্চলে সরবরাহকৃত অর্ডার">
+                        <input type="number" name="village_supply_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="গ্রামাঞ্চলে সরবরাহকৃত অর্ডার" required>
                       </div>
                     </div>
                   </div>
@@ -73,60 +73,55 @@
                   <div class="row mb-4">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="city_supply_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="শহরাঞ্চলে সরবরাহকৃত অর্ডার">
+                        <input type="number" name="city_supply_order" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="শহরাঞ্চলে সরবরাহকৃত অর্ডার" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="product_type" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="পণ্যের ধরণ">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="number" name="total_transaction" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="মোট লেনদেন (৳)">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="number" name="inter_commission" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="উদ্যোক্তা কমিশন (৳) ">
+                        <input type="number" name="product_type" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="পণ্যের ধরণ" required>
                       </div>
                     </div>
                   </div>
                   <div class="row mb-4">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="number" name="source_amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="সোর্সিং এর পরিমাণ (৳)">
+                        <input type="number" name="total_transaction" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="মোট লেনদেন (৳)" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="digital_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="নিবন্ধিত ডিজিটাল সেন্টার">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="text" name="join_digital_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="সংযুক্ত ডিজিটাল সেন্টার">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="text" name="trans_digital_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="লেনদেনকারী ডিজিটাল সেন্টার">
+                        <input type="number" name="inter_commission" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="উদ্যোক্তা কমিশন (৳) " required>
                       </div>
                     </div>
                   </div>
                   <div class="row mb-4">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="others_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="অন্যান্য সংযুক্ত সেন্টার">
+                        <input type="number" name="source_amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="সোর্সিং এর পরিমাণ (৳)" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" name="others_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="অন্যান্য সংযুক্ত সেন্টার">
+                        <input type="number" name="digital_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="নিবন্ধিত ডিজিটাল সেন্টার" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="number" name="join_digital_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="সংযুক্ত ডিজিটাল সেন্টার" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="number" name="trans_digital_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="লেনদেনকারী ডিজিটাল সেন্টার" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="number" name="others_center" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="অন্যান্য সংযুক্ত সেন্টার" required>
                       </div>
                     </div>
                   </div>
